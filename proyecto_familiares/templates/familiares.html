@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            color: aliceblue;
+            text-shadow: 2px 2px 2px #000000;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: #314755;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #26a0da, #314755);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #26a0da, #314755); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        h1{
+            text-align: center;
+        }
+        table, tr, td{
+            border: solid 1px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+        }
+    </style>
+    <title>Familiares</title>
+</head>
+<body>
+
+    <h1>Lista de Familiares</h1>
+    
+    <table>
+        <thead>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+            <th>Fecha de Nacimiento</th>
+        </thead>
+        {% for familiar in familiares %}
+        <tr>
+            <td>{{familiar.nombre}}</td>
+            <td>{{familiar.apellido}}</td>
+            <td>{{familiar.telefono}}</td>
+            <td>{{familiar.fecha_nacimiento}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+ 
+</body>
+</html>
